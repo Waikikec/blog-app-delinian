@@ -29,8 +29,8 @@ const Navbar = () => {
           <form onSubmit={handleSubmit} className="searchWrapper">
             <div className="searchLeft">
               <FontAwesomeIcon
-                icon={faMagnifyingGlass}
                 className="magnifyIcon"
+                icon={faMagnifyingGlass}
               />
               <input
                 className="searchInput"

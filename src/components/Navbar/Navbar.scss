@@ -54,22 +54,24 @@ nav {
 
     .searchLeft {
       display: flex;
+      flex: 1;
       align-items: center;
-    }
 
-    .searchInput {
-      background: none;
-      border: none;
-      outline: none;
-      margin-left: 10px;
-      color: #7d87aa;
-    }
+      .magnifyIcon {
+        width: 16px;
+        height: 16px;
+        color: #7d87aa;
+        cursor: pointer;
+      }
 
-    .magnifyIcon {
-      width: 16px;
-      height: 16px;
-      color: #7d87aa;
-      cursor: pointer;
+      .searchInput {
+        width: 100%;
+        background: none;
+        border: none;
+        outline: none;
+        margin-left: 10px;
+        color: #7d87aa;
+      }
     }
 
     .xMarkIcon {
