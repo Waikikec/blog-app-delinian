@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav>
+    <nav className="navbar">
       <div className="left">
         <a href="/">Global Capital</a>
         <a href="/">Securitization</a>

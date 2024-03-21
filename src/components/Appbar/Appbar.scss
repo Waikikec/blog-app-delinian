@@ -1,0 +1,31 @@
+@import "../../global.scss";
+
+.appbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 20px;
+  background: #f2f8ff;
+
+  .left {
+    img {
+      height: 29px;
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    a {
+      padding: 10px;
+      line-height: 26px;
+      font-size: 16px;
+      font-weight: 600;
+      color: $mainColor;
+    }
+  }
+}

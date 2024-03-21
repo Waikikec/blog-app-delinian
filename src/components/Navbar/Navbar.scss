@@ -1,10 +1,12 @@
-nav {
+@import "../../global.scss";
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
   padding: 0px 24px 0px 20px;
-  background: #161829;
+  background: $mainColor;
   color: white;
 
   .left {
@@ -36,7 +38,7 @@ nav {
       padding: 10px;
       border: none;
       background-color: white;
-      color: #161829;
+      color: $mainColor;
       cursor: pointer;
     }
 
@@ -44,7 +46,7 @@ nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #161829;
+      background: $mainColor;
       color: white;
       width: 300px;
       border-radius: 50px;
@@ -81,7 +83,7 @@ nav {
 
     .pricing {
       background-color: white;
-      color: #161829;
+      color: $mainColor;
     }
 
     .plan {
