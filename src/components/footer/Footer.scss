@@ -1,0 +1,147 @@
+@import "../../global.scss";
+@import "../../responsive.scss";
+
+.footer {
+  background-color: $mainColor;
+
+  .footerContainer {
+    // background-color: bisque;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 0px;
+
+    @include lg {
+      padding: 20px;
+    }
+
+    .footerLinks {
+      // background-color: lightcoral;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      @include sm {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .footerLogoSection {
+        // background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        padding-right: 40px;
+        gap: 20px;
+
+        .footerIcons {
+          display: flex;
+          align-items: center;
+          font-size: 30px;
+          color: $thirdColor;
+          gap: 10px;
+
+          @include sm {
+            justify-content: center;
+          }
+
+          span {
+            color: white;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+
+        .footerLogo {
+          width: 300px;
+          padding-top: 5px;
+        }
+      }
+
+      .hiddenLists {
+        display: block;
+
+        @include sm {
+          display: none;
+        }
+      }
+
+      .footerList {
+        // background-color: aqua;
+        list-style: none;
+        padding: 0px 40px;
+
+        .firstListItem {
+          font-weight: 700;
+          font-style: 18px;
+          line-height: 24px;
+          color: $thirdColor;
+        }
+
+        .footerListItem {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 22px;
+          color: white;
+          padding: 8px 0px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .footerCredits {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 40px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17px;
+
+      @include sm {
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 20px;
+      }
+
+      .leftCreditsText {
+        display: flex;
+        flex: 1;
+        justify-content: flex-start;
+        color: $secondaryColor;
+      }
+
+      .rightCreditsText {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        color: $thirdColor;
+      }
+
+      .hiddenIcons {
+        display: none;
+
+        @include sm {
+          display: block;
+
+          .footerIcons {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            color: $thirdColor;
+            gap: 10px;
+
+            @include sm {
+              justify-content: center;
+            }
+
+            span {
+              color: white;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
