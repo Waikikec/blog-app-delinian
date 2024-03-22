@@ -1,99 +1,96 @@
 @import "../../global.scss";
+@import "../../responsive.scss";
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
-  padding: 0px 24px 0px 20px;
-  background: $mainColor;
-  color: white;
+  height: 60px;
+  padding: 20px;
+  background: #f2f8ff;
 
   .left {
-    display: flex;
-    gap: 20px;
+    img {
+      height: 29px;
+    }
   }
 
   .right {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
     gap: 10px;
 
     a {
-      line-height: 24px;
-      padding: 4px 12px 4px 12px;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .searchButton {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
       padding: 10px;
-      border: none;
-      background-color: white;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 26px;
+      text-align: center;
       color: $mainColor;
-      cursor: pointer;
+
+      @include lg {
+        transition: all 0.4 ease;
+        font-size: 12px;
+        padding: 4px;
+      }
+
+      @include md {
+        display: none;
+      }
     }
 
-    .searchWrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: $mainColor;
-      color: white;
-      width: 300px;
-      border-radius: 50px;
-      border: 1px solid #7d87aa;
-      padding: 7px 14px;
-    }
+    .menuIcon {
+      display: none;
+      z-index: 999;
 
-    .searchLeft {
-      display: flex;
-      flex: 1;
-      align-items: center;
+      &.active {
+        filter: invert(99%) sepia(100%) saturate(16%) hue-rotate(236deg)
+          brightness(104%) contrast(100%);
+      }
 
-      .magnifyIcon {
-        width: 16px;
-        height: 16px;
-        color: #7d87aa;
+      img {
+        width: 30px;
+        height: 30px;
         cursor: pointer;
       }
 
-      .searchInput {
-        width: 100%;
-        background: none;
-        border: none;
-        outline: none;
-        margin-left: 10px;
-        color: #7d87aa;
+      @include md {
+        display: initial;
+      }
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 50%;
+    transition: all 1s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      padding: 15px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    @include md {
+      a {
+        display: initial;
       }
     }
 
-    .xMarkIcon {
-      color: #7d87aa;
-      cursor: pointer;
-    }
-
-    .pricing {
-      background-color: white;
-      color: $mainColor;
-    }
-
-    .plan {
-      background-color: #7d87aa;
-      color: white;
-    }
-
-    .login {
-      color: white;
-      border: 2px solid white;
+    &.active {
+      right: 0;
     }
   }
 }

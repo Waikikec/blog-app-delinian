@@ -1,13 +1,14 @@
-import Appbar from "./components/Appbar/Appbar";
+import "./App.scss";
 import Navbar from "./components/Navbar/Navbar";
-import "./layout.scss";
+import Topbar from "./components/Topbar/Topbar";
 
 function App() {
   return (
-    <div className="layout">
+    <>
+      <Topbar />
       <Navbar />
-      <Appbar />
-    </div>
+      <div className="layout"></div>
+    </>
   );
 }
 

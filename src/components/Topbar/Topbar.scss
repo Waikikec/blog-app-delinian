@@ -1,0 +1,137 @@
+@import "../../global.scss";
+@import "../../responsive.scss";
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0px 24px 0px 20px;
+  background: $mainColor;
+  color: white;
+
+  .left {
+    display: flex;
+    gap: 20px;
+
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.4s ease;
+
+      @include sm {
+        font-size: 12px;
+      }
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $secondaryColor;
+      position: absolute;
+      top: 42px;
+      left: 54px;
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    a {
+      line-height: 24px;
+      padding: 4px 12px 4px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: all 0.4s ease;
+
+      @include sm {
+        display: none;
+      }
+    }
+
+    .searchButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      padding: 10px;
+      border: none;
+      background-color: white;
+      color: $mainColor;
+      cursor: pointer;
+
+      @include sm {
+        display: none;
+      }
+    }
+
+    .searchWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: $mainColor;
+      color: white;
+      width: 300px;
+      border-radius: 50px;
+      border: 1px solid #7d87aa;
+      padding: 7px 14px;
+
+      @include md {
+        display: none;
+      }
+    }
+
+    .searchLeft {
+      display: flex;
+      flex: 1;
+      align-items: center;
+
+      .magnifyIcon {
+        width: 16px;
+        height: 16px;
+        color: #7d87aa;
+        cursor: pointer;
+      }
+
+      .searchInput {
+        width: 100%;
+        background: none;
+        border: none;
+        outline: none;
+        margin-left: 10px;
+        color: #7d87aa;
+      }
+    }
+
+    .xMarkIcon {
+      color: #7d87aa;
+      cursor: pointer;
+    }
+
+    .pricing {
+      background-color: white;
+      color: $mainColor;
+    }
+
+    .plan {
+      background-color: #7d87aa;
+      color: white;
+    }
+
+    .login {
+      color: white;
+      border: 2px solid white;
+    }
+  }
+}

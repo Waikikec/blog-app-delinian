@@ -6,7 +6,7 @@ import "./Menu.scss";
 const Menu = () => {
   return (
     <div className="menuWrap">
-      <ul className="menu">
+      <ul className="menuList">
         <li className="menuItem">
           <span>Data</span>
           <span>

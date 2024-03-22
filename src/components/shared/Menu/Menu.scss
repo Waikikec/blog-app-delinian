@@ -1,6 +1,7 @@
 @import "../../../global.scss";
+@import "../../../responsive.scss";
 
-.menu,
+.menuList,
 .dropMenu {
   list-style-type: none;
   padding: 0;
@@ -21,6 +22,16 @@
   font-size: 16px;
   font-weight: 600;
   color: $mainColor;
+
+  @include lg {
+    transition: all 0.4 ease;
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  @include md {
+    display: none;
+  }
 
   span {
     &:hover {

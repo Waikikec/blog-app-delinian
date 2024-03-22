@@ -1,69 +1,43 @@
-import { faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import Menu from "../shared/Menu/Menu";
 import "./Navbar.scss";
 
 const Navbar = () => {
-  const [isSearchActive, setIsSearchActive] = useState(false);
-  const [inputValue, setInputValue] = useState("");
-
-  const handleChange = (e) => {
-    setInputValue(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Submitted value:", inputValue);
-    setInputValue("");
-  };
+  const [open, setOpen] = useState(false);
 
   return (
     <nav className="navbar">
       <div className="left">
-        <a href="/">Global Capital</a>
-        <a href="/">Securitization</a>
-        <a href="/">Global Markets</a>
+        <a href="/" className="logo">
+          <img src="/logo.png" alt="Logo" />
+        </a>
       </div>
       <div className="right">
-        {isSearchActive ? (
-          <form onSubmit={handleSubmit} className="searchWrapper">
-            <div className="searchLeft">
-              <FontAwesomeIcon
-                className="magnifyIcon"
-                icon={faMagnifyingGlass}
-              />
-              <input
-                className="searchInput"
-                placeholder="Search key words, topics"
-                onChange={handleChange}
-                value={inputValue}
-              />
-            </div>
-            <FontAwesomeIcon
-              className="xMarkIcon"
-              icon={faXmark}
-              onClick={() => setIsSearchActive(false)}
-            />
-          </form>
-        ) : (
-          <button
-            href="/Search"
-            className="searchButton"
-            onClick={() => setIsSearchActive(true)}
-          >
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </button>
-        )}
+        <a href="/">Markets</a>
+        <a href="/">People and Markets</a>
+        <Menu />
+        <a href="/">Podcasts</a>
+        <a href="/">Special Reports</a>
+        <a href="/">Awards</a>
+        <a href="/">CG Live</a>
+        <a href="/">League Tables</a>
+        <a href="/">The Weekly</a>
 
-        <a href="/Pricing" className="pricing">
-          Pricing
-        </a>
-        <a href="/Plan" className="plan">
-          Free Trial
-        </a>
-        <a href="/Login" className="login">
-          Login
-        </a>
+        <div className={open ? "menuIcon active" : "menuIcon"}>
+          <img
+            src="/menu.png"
+            alt="menu"
+            onClick={() => setOpen((prev) => !prev)}
+          />
+        </div>
+
+        <div className={open ? "menu active" : "menu"}>
+          <a href="/">Home</a>
+          <a href="/">Login</a>
+          <a href="/">Register</a>
+          <a href="/">About</a>
+          <a href="/">Contact</a>
+        </div>
       </div>
     </nav>
   );
