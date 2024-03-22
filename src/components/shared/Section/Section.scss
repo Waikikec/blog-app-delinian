@@ -1,0 +1,17 @@
+@import "../../../global.scss";
+@import "../../../responsive.scss";
+
+.section {
+  background-color: white;
+  display: flex;
+  padding-top: 20px;
+  gap: 10px;
+  color: $thirdColor;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+
+  @include md {
+    padding-top: 10px;
+  }
+}

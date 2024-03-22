@@ -1,0 +1,164 @@
+@import "../../global.scss";
+@import "../../responsive.scss";
+
+.article {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0px;
+
+  .articleTitle {
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 46px;
+    color: $mainColor;
+
+    @include md {
+      font-weight: 700s;
+      font-size: 27px;
+      line-height: 32px;
+    }
+  }
+
+  .articleSubTitle {
+    padding: 0px 0px 10px 0px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 29px;
+    color: $textColor;
+
+    @include md {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  .articleContent {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    @include md {
+      flex-direction: column;
+    }
+
+    .articleLeftContent {
+      flex: 2;
+
+      img {
+        width: 100%;
+      }
+
+      span {
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32pxw;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        padding: 10px 0px 10px 0px;
+      }
+    }
+
+    .articleRightContent {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .authorInformation {
+        display: flex;
+        flex-direction: column;
+        color: $thirdColor;
+        gap: 20px;
+
+        @include md {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        span {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+        }
+
+        .authorName {
+          text-decoration: underline;
+          font-weight: 600;
+          color: $mainColor;
+        }
+
+        .articleActions {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          @include md {
+            transform: scale(0.7);
+          }
+
+          .articleIconGift {
+            display: flex;
+            align-items: center;
+            border: 1px solid $thirdColor;
+            border-radius: 20px;
+            padding: 10px;
+            gap: 10px;
+          }
+
+          .articleIcon {
+            width: 30px;
+            height: 30px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+
+      .articleRelatedTopics {
+        @include md {
+          padding: 20px 0px;
+        }
+
+        h3 {
+          padding: 0px 10px;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 22px;
+          color: $thirdColor;
+        }
+
+        span {
+          display: inline-block;
+          padding: 0px 10px;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 22px;
+        }
+
+        hr {
+          margin: 10px;
+          border: 0;
+          height: 1px;
+          background: #333;
+          background-image: linear-gradient(to right, #ccc, #333, #ccc);
+        }
+      }
+    }
+  }
+}
